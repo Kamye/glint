@@ -1,5 +1,5 @@
 $(function() {
 
-	// Custom JS
+	$('.parallax-window').parallax({imageSrc: '../img/hero-bg.jpg'});
 
 });
