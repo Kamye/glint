@@ -22,39 +22,74 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">   
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
 
-<header class="header-t">
+<!-- header 
+===================================================== -->
+	<header class="header-t">
 
-	<div class="header-logo"><a href="#" class="site-logo"><img src="img/logo.png" alt="Homepage"></a></div>
+		<div class="header-logo">
+			<a href="#" class="site-logo">
+				<img src="img/logo.png" alt="Homepage">
+			</a>
+		</div>
 
-	<nav class="header-nav">
+		<nav class="header-nav">
 
-		<a href="#0" class="header-nav__close" title="close"><span>"Close"</span></a>
+			<a href="#0" class="header-nav__close" title="close"><span>"Close"</span></a>
 
-		<h3>Navigation</h3>
-		<ul class="header-nav__list">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Works</a></li>
-			<li><a href="#">Clients</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
+			<div class="header-nav__content">
+				<h3>Navigation</h3>
 
-		<p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href="#">voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
-
-		<ul class="header-nav__social">
+				<ul class="header-nav__list">
+					<li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
+					<li><a class="smoothscroll" href="#about" title="about">About</a></li>
+					<li><a class="smoothscroll" href="#services" title="services">Services</a></li>
+					<li><a class="smoothscroll" href="#works" title="works">Works</a></li>
+					<li><a class="smoothscroll" href="#clients" title="clients">Clients</a></li>
+					<li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+				</ul>
 			
-		</ul>
+				<p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href="#">voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+			
+				<ul class="header-nav__social">
+					<li>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+					</li>
+					<li>
+							<a href="#"><i class="fa fa-behance"></i></a>
+					</li>
+					<li>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+					</li>
+				</ul>
 
-	</nav>
+			</div> <!-- end header-nav__content -->
 
-</header>
+		</nav> <!-- end header-nav -->
+
+		<a href="#0" class="header-menu-toggle">
+			<span class="header-menu-text">Menu</span>
+			<span class="header-menu-icon"></span>
+		</a>	
+
+	</header>
+
+
+
+<script src="js/scripts.min.js"></script>
 
 </body>
 </html>
