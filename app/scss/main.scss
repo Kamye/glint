@@ -1,58 +1,12 @@
-@import "vars";
 @import "fonts";
 @import "libs";
 
-::placeholder {
-	color: #666;
-}
-
-::selection {
-	background-color: $accent;
-	color: #fff;
-}
-
-body {
-	font-size: 16px;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.65;
-	font-family: $default-font;
-	overflow-x: hidden;
-	color: $text;
-	input, textarea {
-		border: #666 1px solid;
-		outline: none;
-		&:focus:required:invalid {
-			border-color: red;
-		}
-		&:required:valid {
-			border-color: green;
-		}
-	}
-}
-
-.img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	&.img-width {
-		width: 100%;
-	}
-}
-
-.text-center {
-	text-align: center;
-}
-
-b, strong {
-	font-weight: bold;
-}
 
 /* ================================================================
  * # header styles
  * ---------------------------------------------------------------- */
 .header-t{
-	background: black;
+	background-color: transparent;
 	width: 100%;
 	height: 96px;
 	position: absolute;
@@ -307,6 +261,173 @@ b, strong {
 		&::after{
 			bottom: -9px;
 		}
+	}
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * header
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  .header-t {
+    height: 90px;
+  }
+  .header-logo {
+    left: 30px;
+  }
+  .header-menu-toggle {
+    right: 25px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header-menu-text {
+    display: none;
+  }
+}
+
+
+/* ===================================================================
+ * # home 
+ *
+ * ------------------------------------------------------------------- */
+.home-t {
+	width: 100%;
+	height: 100%;
+	min-height: 786px;
+	background-color: transparent;
+	position: relative;
+	display: table;
+
+	.shadow-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: .4;
+		background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: .6;
+		background-color: #000000;
+	}
+}
+
+.no-js .home-t {
+	background-color: #000000;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * ## home content
+ * ------------------------------------------------------------------- */
+.home-content {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 15.6rem;
+	position: relative;
+	overflow: hidden;
+
+	h3 {
+		font-family: monterrat, sans-serif;
+		font-weight: 500;
+		font-size: 1.6rem;
+		color: rgba(255, 255, 255, 0.5);
+		text-transform: uppercase;
+		letter-spacing: .3rem;
+		position: relative;
+		margin-top: 0;
+		margin-bottom: 1.2rem;
+		margin-left: 6px;
+	}
+	h1 {
+		font-family: monterrat, sans-serif;
+		font-weight: 500;
+		font-size: 6.3rem;
+		line-height: 1.333;
+		margin-top: 0;
+		color: #fff;
+	}
+
+	&__main {
+		padding-top: 24rem;
+		position: relative;
+	}
+
+	&__buttons {
+		padding-top: 6rem;
+		text-align-last: left;
+
+		.btn {
+			width: 215px;
+			border-color: #fff;
+			color: #fff;
+			margin: 1.5rem 1.5rem 0 0;
+			letter-spacing: .25rem;
+			transition: all 0.5s ease-in-out;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover,
+			&:focus {
+				background: #fff !important;
+				color: #000;
+			}
+		}
+	}
+
+	&__scroll {
+		position: absolute;
+		right: 9.5rem;
+		bottom: 8.4rem;
+
+		a {
+			font-family: montserrat, sans-serif;
+			font-weight: 600;
+			font-size: 1rem;
+			text-transform: uppercase;
+			letter-spacing: .3rem;
+			color: #fff;
+			position: relative;
+			display: inline-block;
+			line-height: 3rem;
+			padding-left: 2.5rem;
+
+			&::before {
+				border-bottom: 2px solid #39b54a;
+				border-right: 2px solid #39b54a;
+				content: '';
+				display: block;
+				height: 8px;
+				width: 8px;
+				margin-top: -6px;
+				pointer-events: none;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform-origin: 66% 66%;
+				transform: rotate(45deg);
+				transition: all 0.15s ease-in-out;
+			}
+		}
+	}
+
+	&__line {
+		display: block;
+		width: 2px;
+		height: 10.2rem;
+		background-color: #39b54a;
+		position: absolute;
+		right: 7.2rem;
+		bottom: 0;
 	}
 }
 

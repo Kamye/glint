@@ -68,4 +68,5 @@ $(function() {
 };
 clOffCanvas();
 clMenuOnScrolldown();
+// clOffCanvas();
 })
