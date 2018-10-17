@@ -359,7 +359,7 @@
 
 	&__main {
 		padding-top: 24rem;
-		// position: relative;
+		position: relative;
 	}
 
 	&__buttons {
@@ -430,5 +430,286 @@
 		bottom: 0;
 	}
 }
+
+
+/* ------------------------------------------------------------------- 
+ * ## home social 
+ * ------------------------------------------------------------------- */
+.home-social {
+	font-family: montserrat, sans-serif;
+	list-style: none;
+	margin: 0;
+	top: 50%;
+	right: 5.4rem;
+	transform: translate3d(0, -50%, 0);
+	position: absolute;
+
+	a {
+		color: #fff;
+		transition: all 0.5s ease-in-out;
+	}
+
+	li {
+		position: relative;
+		padding: .9rem 0;
+		a {
+			display: block;
+			width: 33px;
+			height: 33px;
+		}
+	}
+
+	i,
+	span {
+		position: absolute;
+		top: 0;
+		line-height: 33px;
+		transition: all 0.5s ease-in-out;
+	}
+
+	i {
+		font-style: 14px;
+		right: 0;
+		text-align: center;
+		display: inline-block;
+		width: 33px;
+		height: 33px;
+		line-height: calc(33px - 4px);
+		border: 2px solid #fff;
+		border-radius: 50%;
+	}
+
+	span {
+		color: #39b54a;
+		right: 4.5rem;
+		font-size: 1.3rem;
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(0);
+		transform-origin: 100% 50%;
+	}
+
+	li:hover span {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+}
+
+
+/* animate .home-content__main
+ * ------------------------------------------------------------------- */
+html.cl-preload .home-content__main {
+	opacity: 0;
+}
+
+html.cl-loaded .home-content__main {
+	animation-duration: 2s;
+	animation-name: fadeIn;
+}
+
+html.no-csstransitions .home-content__main {
+	opacity: 1;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * ## home animations
+ * ------------------------------------------------------------------- */
+
+
+/* fade in */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 150%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+/* fade out */
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(0, -150%, 0);
+	}
+}
+
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * home
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1500px) {
+	.home-content {
+		&__main {
+			max-width: 1000px;
+		}
+		h1 {
+			font-size: 6rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.home-content {
+		&__main {
+			max-width: 800px;
+		}
+		h1 {
+			font-size: 5.5rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.home-content {
+		&__main {
+			max-width: 680px;
+			padding-top: 21rem;
+			padding-right: 80px;
+		}
+		h1 {
+			font-size: 4.6rem;
+		}
+		br {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.home-content {
+		&__main {
+			max-width: 550px;
+			padding-right: 70px;
+		}
+		h1 {
+			font-size: 4rem;
+		}
+		h3 {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.home-content {
+		&__main {
+			max-width: 490px;
+		}
+		&__buttons {
+			padding-top: 1.2rem;
+			text-align: center;
+			.btn {
+				display: block;
+				width: 70%;
+				margin: 1.5rem 0 0 0;
+			}
+		}
+		h1 {
+			font-size: 6rem;
+		}
+		&__scroll {
+			right: 7.5rem;
+		}
+		&__line {
+			right: 5.5rem;
+		}
+	}
+	.home-social {
+		right: 4rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.home-content {
+		&__main {
+			max-width: 490px;
+		}
+		h1 {
+			font-size: 3.8rem;
+		}
+		&__scroll {
+			bottom: 5.4rem;
+		}
+		&__line {
+			height: 7.2rem;
+		}
+	}
+	.home-social {
+		right: 2rem;
+		li {
+			padding: .6rem 0;
+		}
+		i {
+			font-size: 17px;
+			border: none;
+		}
+		span {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.home-t {
+		min-height: 642px;
+	}
+	.home-content {
+		&__main {
+			max-width: none;
+			text-align: center;
+			padding-top: 15rem;
+			padding-right: 25px;
+			width: 85%;
+		}
+		h1 {
+			font-size: 3.5rem;
+		}
+		&__buttons{
+			padding-top: 1.2rem;
+			.btn {
+				width: auto;
+				margin: 1.5rem 0 0 0;
+			}
+		}
+	}
+	.home-social {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+  .home-content h1 {
+    font-size: 3.3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+	.s-home {
+		min-height: 630px;
+	}
+	.home-content h1 {
+		font-size: 3.2rem;
+	}
+	.home-content__main {
+		padding-top: 16.2rem;
+		width: auto;
+	}
+}
+
+
+
+
 
 // @import "media"; // Always at the end
